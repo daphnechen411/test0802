@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.text {
+    /*border:1px solid red;*/
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /*預設為水平排列*/
+    justify-content: space-between;
+    /*先左右切齊，再平均分配*/
+    padding: 40px 0px 40px 0px;
+}
+
+.textbox {
+    /*border: 1px #cccccc solid;*/
+    width: 360px;
+    /*background-color: #cccccc;*/
+    text-align: center;
+    padding: 10px;
+}
+
+.text h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: red;
+}
+
+p {
+    font-size: 20px;
+    text-align: left;
+}
+
+.slogan {
+    background-color: rgba(195, 16, 16, 0.97);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.slogan h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*將原h2有的高度再重設 上方的slogan的padding才會正常*/
+}
+
+/* 推薦課程 */
+.reComm h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: rgb(6, 139, 6);
+    text-align: center;
+}
+
+/* 課程介紹 */
+.classContent {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    /*左右貼齊+平均分配*/
+}
+
+.classBox {
+    width: 360px;
+    margin: 20px;
+    padding: 20px 20px 40px 20px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.classBox img {
+    width: 90%;
+    text-align: center;
+}
+
+.classBox h3 {
+    font-size: 32px;
+}
+
+.classBox .p-blue {
+    color: #086ada;
+}
+
+.classBox p {
+    color: #888;
+    font-size: 16px;
+}
+
+.classBox .p-center {
+    text-align: center;
+}
+
+.classBox p s {
+    font-size: 20px;
+}
+
+.classBox span {
+    color: #ee0e0e;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* 按鈕button */
+
+.classBox .bt-center a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.classBox .bt-center a {
+    display: block;
+    /*將超連結轉為區塊元素才能寫進CSS*/
+    text-align: center;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #ee0e0e;
+    color: #fff;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.classBox .bt-center a:hover {
+    background-color: #b91f1f;
+}
+
+/*用button*/
+.classBox .bt-R {
+    text-align: center;
+    margin: 10px;
+    width: 90%;
+
+}
+
+.classBox button {
+    text-decoration: none;
+    background-color: #ee0e0e;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.classBox button:hover {
+    background-color: #b91f1f;
+    cursor: pointer;
+
+}
+
+/*lighbox  */
+
+/* https://lokeshdhakar.com/projects/lightbox2 */
+
+
+/*footer */
+.footer {
+    padding: 16px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+/* RWD 640-1119尺寸*/
+@media (min-width:640px) and (max-width:1119px) {
+
+    .text {
+        width: 90%;
+    }
+
+    .classContent{
+        width: 90%;
+    }
+    .classbox{
+        width: 90%;
+    }
+}
+
+/* RWD 手機尺寸*/
+@media (max-width:639px) {
+
+    #wrap {
+        /* width: 400px; */
+        width: 100%;
+        /* border: #ee0e0e 1px solid; */
+        margin: auto;
+    }
+
+    .banner img {
+        /* width: 100%; */
+        height: 300px;
+        object-fit: cover;   
+        /* https://hackmd.io/@lunzaizai/B1mRKlqvY?utm_source=preview-mode&utm_medium=rec */
+    }
+
+
+    .text {
+        /* flex-direction: column; flex的效果改變方向 */
+        display: block;
+        /*純粹堆疊*/
+        width: 80%;
+    }
+
+    .textbox {
+        margin: auto;
+        width: 80%;
+    }
+
+    .slogan h2 {
+        font-size: 22px;
+    }
+
+    .classContent {
+        flex-direction: column;
+        /*flex的效果改變方向 */
+        width: 90%;
+    }
+
+    .classBox {
+        margin: 20px auto 20px auto;
+        width: 90%;
+    }
+
+
+
+
+}
